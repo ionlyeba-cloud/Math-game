@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مغامرة الأرقام - لعبة الرياضيات للأطفال</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow-x: hidden;
+        }
+
+        /* حاوية اللعبة الرئيسية */
+        .game-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            border: 6px solid #ffd166;
+            overflow: hidden;
+        }
+
+        /* زينة الخلفية */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.12;
+            z-index: 0;
+        }
+        .shape-1 { width: 150px; height: 150px; background: #ff6b6b; top: -40px; right: -40px; }
+        .shape-2 { width: 120px; height: 120px; background: #06d6a0; bottom: -30px; left: -30px; }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 0px #ffe66d;
+        }
+
+        p.subtitle {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* الشاشات */
+        .screen {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .screen.active {
+            display: block;
+        }
+
+        @keyframes fade
